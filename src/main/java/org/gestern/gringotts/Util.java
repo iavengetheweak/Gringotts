@@ -160,6 +160,9 @@ public final class Util {
             case HOPPER:
             case DROPPER:
             case BARREL:
+            case SMOKER:
+            case BLAST_FURNACE:
+            case ENDER_CHEST:
                 return true;
             default:
                 return false;
