@@ -6,7 +6,7 @@
     <version>2.11.2-SNAPSHOT</version>
 
     <build>
-        <finalName>${project.artifactId}-${project.version}-r${buildNumber}</finalName>
+        <finalName>Gringotts-Test-1.0</finalName>
         <resources>
             <resource>
                 <directory>${basedir}</directory>
@@ -78,27 +78,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>buildnumber-maven-plugin</artifactId>
-                <version>1.4</version>
-                <executions>
-                    <execution>
-                        <configuration>
-                            <useLastCommittedRevision>true</useLastCommittedRevision>
-                        </configuration>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>create</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <doCheck>true</doCheck>
-                    <doUpdate>true</doUpdate>
-                    <shortRevisionLength>7</shortRevisionLength>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
@@ -114,13 +93,6 @@
             <artifactId>derby</artifactId>
             <version>10.9.1.0</version>
             <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.palmergames.bukkit.towny</groupId>
-            <artifactId>Towny</artifactId>
-            <version>0.95.2.22</version>
-            <scope>provided</scope>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>net.tnemc</groupId>
@@ -181,13 +153,12 @@
             <version>1.0.2</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>com.jojodmo</groupId>
             <artifactId>customitems-api</artifactId>
             <version>PLACEHOLDER</version>
             <scope>system</scope>
-            <systemPath>${basedir}/libs/CustomItemsAPI_PLACEHOLDER.jar</systemPath>
-        </dependency>
+        </dependency>-->
     </dependencies>
 
     <properties>
@@ -209,14 +180,6 @@
         <repository>
             <id>papermc</id>
             <url>https://papermc.io/repo/repository/maven-public/</url>
-        </repository>
-        <!--
-        You'll need to setup your settings.xml file
-        Read more here: https://github.com/TownyAdvanced/Towny/wiki/TownyAPI
-         -->
-        <repository>
-            <id>github-towny</id>
-            <url>https://maven.pkg.github.com/TownyAdvanced/Towny</url>
         </repository>
         <repository>
             <id>CodeMC</id>
